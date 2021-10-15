@@ -284,6 +284,7 @@ module Spreedly
 
     def deliver_to_receiver_body(payment_method_token, receiver_options)
       build_xml_request('delivery') do |doc|
+        doc.continue_caching true
         doc.payment_method_token payment_method_token
         doc.url receiver_options[:url]
         doc.headers do
