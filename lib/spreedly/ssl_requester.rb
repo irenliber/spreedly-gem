@@ -24,7 +24,7 @@ module Spreedly
 
     def ssl_request(method, endpoint, body, headers, options = {})
       opts = { talking_to_gateway: false, return_raw: false }.merge(options)
-      how_long = opts[:talking_to_gateway] ? 66 : 10
+      how_long = opts[:talking_to_gateway] ? 106 : 10
 
       raw_response = Timeout::timeout(how_long) do
         raw_ssl_request(method, endpoint, body, headers)
