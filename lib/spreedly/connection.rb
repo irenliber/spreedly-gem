@@ -31,8 +31,8 @@ module Spreedly
     def http
       http = Net::HTTP.new(endpoint.host, endpoint.port)
       configure_ssl(http)
-      http.open_timeout = 64
-      http.read_timeout = 64
+      http.open_timeout = 104
+      http.read_timeout = 104
       http
     end
 
